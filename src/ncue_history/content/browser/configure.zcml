@@ -17,4 +17,13 @@
       directory="static"
       />
 
+  <!-- Browser View -->
+  <browser:page
+      name="cover_view"
+      for="ncue_history.content.interfaces.ICover"
+      class=".views.CoverView"
+      permission="zope2.View"
+      layer="ncue_history.content.interfaces.INcueHistoryContentLayer"
+      />
+
 </configure>
