@@ -1,0 +1,5 @@
+<tal:flicker condition="python:hasattr(context, 'flickerEmbedCode') and getattr(context, 'flickerEmbedCode')">
+    <tal:cansee condition="python:not view.request['ACTUAL_URL'].endswith('/edit')">
+        <div class="flicker_embedded" tal:content="structure context/flickerEmbedCode" />
+    </tal:cansee>
+</tal:flicker>

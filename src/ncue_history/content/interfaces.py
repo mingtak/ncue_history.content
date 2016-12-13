@@ -5,31 +5,13 @@ from ncue_history.content import _
 from zope import schema
 from zope.interface import Interface
 from plone.supermodel import model
-from z3c.relationfield.schema import RelationChoice
+from z3c.relationfield.schema import RelationChoice, RelationList
 from plone.app.vocabularies.catalog import CatalogSource
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
 class INcueHistoryContentLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
-
-
-class IFlicker(Interface):
-
-    title = schema.TextLine(
-        title=_(u"Title"),
-        required=True,
-    )
-
-    description = schema.Text(
-        title=_(u"Description"),
-        required=False,
-    )
-
-    flickerEmbedCode = schema.TextLine(
-        title=_(u"Flicker Embed Code"),
-        required=True,
-    )
 
 
 class ICover(Interface):
@@ -93,4 +75,17 @@ class ICover(Interface):
         source=CatalogSource(portal_type='Image'),
     )
 
+
+    model.fieldset(
+        'hero_slides',
+        label=_(u"hero_slides"),
+        fields=['hero_slides']
+    )
+
+    hero_slides = RelationList(
+        title=_(u"Hero Slides"),
+        value_type=RelationChoice(title=_(u"Related"),
+                                  source=CatalogSource(portal_type='Image'),),
+        required=False,
+    )
 
