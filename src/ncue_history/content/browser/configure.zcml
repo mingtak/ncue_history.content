@@ -19,6 +19,14 @@
 
   <!-- Browser View -->
   <browser:page
+      name="flicker_view"
+      for="ncue_history.content.interfaces.IFlicker"
+      class=".views.FlickerView"
+      permission="zope2.View"
+      layer="ncue_history.content.interfaces.INcueHistoryContentLayer"
+      />
+
+  <browser:page
       name="cover_view"
       for="ncue_history.content.interfaces.ICover"
       class=".views.CoverView"

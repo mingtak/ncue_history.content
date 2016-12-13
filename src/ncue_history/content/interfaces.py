@@ -14,6 +14,24 @@ class INcueHistoryContentLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 
 
+class IFlicker(Interface):
+
+    title = schema.TextLine(
+        title=_(u"Title"),
+        required=True,
+    )
+
+    description = schema.Text(
+        title=_(u"Description"),
+        required=False,
+    )
+
+    flickerEmbedCode = schema.TextLine(
+        title=_(u"Flicker Embed Code"),
+        required=True,
+    )
+
+
 class ICover(Interface):
 
     title = schema.TextLine(
