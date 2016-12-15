@@ -12,6 +12,25 @@
       class=".viewlets.Flicker"
       permission="zope2.View"
       />
+
+    <browser:viewlet
+      name="header_info"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="header_info.pt"
+      class=".viewlets.HeaderInfo"
+      permission="zope2.View"
+      />
+
+    <browser:viewlet
+      name="footer_info"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="footer_info.pt"
+      class=".viewlets.FooterInfo"
+      permission="zope2.View"
+      />
+
 <!--
     <browser:viewlet
       name="hero_banner"
