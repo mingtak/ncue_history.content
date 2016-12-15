@@ -1,6 +1,7 @@
 <?python
 from plone import api
 portal = api.portal.get()
+brain = api.content.find(context=portal, Type='Image', sort_on='created', sort_order='reverse')
 ?>
 
   <div class="footer-info">
@@ -12,11 +13,11 @@ portal = api.portal.get()
           <div class="widget widget-links">
             <h5>歷史學研究所</h5>
             <ul>
-              <li><a href="#">本所理念與特色</a></li>
-              <li><a href="#">師資介紹</a></li>
-              <li><a href="#">教學資源與設備</a></li>
-              <li><a href="#">畢業生進路</a></li>
-              <li><a href="#">招生資訊</a></li>
+              <li><a href="/about/intro">本所理念與特色</a></li>
+              <li><a href="/about/teacher">師資介紹</a></li>
+              <li><a href="/about/resource">教學資源與設備</a></li>
+              <li><a href="/about/future">畢業生進路</a></li>
+              <li><a href="/admissions">招生資訊</a></li>
             </ul>
           </div>
         </div>
@@ -27,11 +28,11 @@ portal = api.portal.get()
           <div class="widget widget-links">
             <h5>相關連結</h5>
             <ul>
-              <li><a href="#">國立彰化師範大學</a></li>
-              <li><a href="#">師生交流</a></li>
-              <li><a href="#">歷史與文化產業學程</a></li>
-              <li><a href="#">主題專案</a></li>
-              <li><a href="#">資源下載</a></li>
+              <li><a href="http://www.ncue.edu.tw" target="_blank">國立彰化師範大學</a></li>
+              <li><a href="/exchanges">師生交流</a></li>
+              <li><a href="/history_culture">歷史與文化產業學程</a></li>
+              <li><a href="/event">學術活動</a></li>
+              <li><a href="/6">資源下載</a></li>
             </ul>
           </div>
         </div>
@@ -40,14 +41,14 @@ portal = api.portal.get()
         <!--EDU2 FOOTER CONTANT DES START-->
         <div class="col-md-3">
           <div class="widget wiget-instagram">
-            <h5>Follow N.C.U.E. News</h5>
+            <h5>最新動態</h5>
             <div class="mod-b sep" data-usn-element-name="00000142-523d-deff-af66-5a3d7cfa0003" data-aid="a34109">
               <ul class="bar-pad6 block">
-                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/490a609/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png" alt="Facebook" srcset="http://www.usnews.com/dims4/USNEWS/490a609/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png, http://www.usnews.com/dims4/USNEWS/978d219/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Fc4%2F39%2F677999944687ac9ad6e43d137456%2Ffacebook-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
-                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/fd3ae02/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png" alt="Twitter" srcset="http://www.usnews.com/dims4/USNEWS/fd3ae02/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png, http://www.usnews.com/dims4/USNEWS/61220e8/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2F67%2F7d%2Fb1d026154808be5169e12d9eea1a%2Ftwitter-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
-                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/926d82f/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png" alt="Google+" srcset="http://www.usnews.com/dims4/USNEWS/926d82f/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png, http://www.usnews.com/dims4/USNEWS/2feb01a/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Ff9%2Fc6%2F77b52fad43989c86af1be633e5ca%2Fgoogle-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
-                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/f278c30/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png" alt="LinkedIn" srcset="http://www.usnews.com/dims4/USNEWS/f278c30/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png, http://www.usnews.com/dims4/USNEWS/bc81333/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2Fea%2F0b%2Fc2989d554fc3ac3fc3c4ddc328c1%2Flinkedin-icon.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
-                <li class="item"> <a href="#" target="_blank"> <img src="http://www.usnews.com/dims4/USNEWS/de32fca/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png" alt="rss58x58.png" srcset="http://www.usnews.com/dims4/USNEWS/de32fca/2147483647/thumbnail/55x55/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png, http://www.usnews.com/dims4/USNEWS/5c04a78/2147483647/thumbnail/110x110/quality/85/?url=%2Fcmsmedia%2F88%2Fbe%2F99f2482541d7a2759e9ca9785d30%2Frss58x58.png 2x" data-size="socialModuleIcon" width="55" height="55"> </a> </li>
+                <li class="item" tal:repeat="item python:brain[0:9]">
+                  <a tal:attributes="href python:item.getObject().getParentNode().absolute_url()">
+                    <img tal:attributes="src item/getURL; alt item/Title" data-size="socialModuleIcon" width="55" height="55">
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
