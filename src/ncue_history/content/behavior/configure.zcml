@@ -12,5 +12,12 @@
         factory=".behaviors.Flicker"
         />
 
+    <plone:behavior
+        title="bxslider"
+        description="BXSlider image selector."
+        provides=".behaviors.IBxSlider"
+        factory=".behaviors.BxSlider"
+        />
+
 </configure>
 

@@ -43,6 +43,7 @@
     <element value="plone.app.contenttypes.behaviors.tableofcontents.ITableOfContents"/>
     <element value="plone.app.lockingbehavior.behaviors.ILocking" />
     <element value="ncue_history.content.behavior.behaviors.IFlicker" />
+    <element value="ncue_history.content.behavior.behaviors.IBxSlider" />
   </property>
 
   <!-- View information -->

@@ -7,6 +7,10 @@ class Flicker(base.ViewletBase):
     """  """
 
 
+class BxSlider(base.ViewletBase):
+    """  """
+
+
 class HeaderInfo(base.ViewletBase):
     """  """
 

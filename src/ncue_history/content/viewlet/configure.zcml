@@ -5,6 +5,15 @@
     i18n_domain="ncue_history.content">
 
     <browser:viewlet
+      name="bxslider"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      template="bxslider.pt"
+      class=".viewlets.BxSlider"
+      permission="zope2.View"
+      />
+
+    <browser:viewlet
       name="flicker"
       for="*"
       manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"

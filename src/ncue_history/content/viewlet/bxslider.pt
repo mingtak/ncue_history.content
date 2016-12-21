@@ -1,0 +1,13 @@
+<tal:bxslider condition="python:hasattr(context, 'bxSlider') and getattr(context, 'bxSlider')">
+<div class="bxslider-viewlet">
+
+<ul class="bxslider">
+  <li tal:repeat="image context/bxSlider">
+    <img src="${image/to_object/absolute_url}/@@images/image/large"/>
+  </li>
+</ul>
+
+
+
+</div>
+</tal:bxslider>

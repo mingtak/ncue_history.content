@@ -79,7 +79,7 @@ class ICover(Interface):
     model.fieldset(
         'hero_slides',
         label=_(u"hero_slides"),
-        fields=['hero_slides']
+        fields=['hero_slides', 'hero_link']
     )
 
     hero_slides = RelationList(
@@ -89,3 +89,7 @@ class ICover(Interface):
         required=False,
     )
 
+    hero_link = schema.Text(
+        title=_(u"Hero Link URL"),
+        required=False,
+    )

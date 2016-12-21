@@ -28,7 +28,26 @@ class IFlicker(model.Schema):
     )
 
 
+class IBxSlider(model.Schema):
+    """Add a field to select images for BxSlider
+    """
+
+    directives.fieldset(
+            'BxSlider',
+            label=_(u'BxSleder'),
+            fields=('bxSlider',),
+        )
+
+    bxSlider = RelationList(
+        title=_(u"BxSlider Selector"),
+        value_type=RelationChoice(title=_(u"Related"),
+                                  source=CatalogSource(portal_type='Image'),),
+        required=False,
+    )
+
+
 alsoProvides(IFlicker, IFormFieldProvider)
+alsoProvides(IBxSlider, IFormFieldProvider)
 
 
 def context_property(name):
@@ -51,3 +70,13 @@ class Flicker(object):
     # -*- Your behavior property setters & getters here ... -*-
     flickerEmbedCode = context_property("flickerEmbedCode")
 
+
+class BxSlider(object):
+    implements(IBxSlider)
+    adapts(IDexterityContent)
+
+    def __init__(self,context):
+        self.context = context
+
+    # -*- Your behavior property setters & getters here ... -*-
+    bxSlider = context_property("bxSlider")
