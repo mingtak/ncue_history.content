@@ -13,15 +13,17 @@ portal = api.portal.get()
               <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-globe"></i>語言 <span class="caret"></span> </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#"><!-- <i><img src="++theme++ncue_history.theme/images/english.jpg" alt=""></i> -->中文</a></li>
-                  <li><a href="#"><!-- <i><img src="++theme++ncue_history.theme/images/english.jpg" alt=""></i> -->English</a></li>
+                  <li><a href="#">中文</a></li>
+                  <li><a href="#">English</a></li>
                 </ul>
               </div>
             </div>
-            <ul class="login_wrap" tal:condition="python:api.user.is_anonymous()">
-              <li><a href="login"><i class="fa fa-sign-in"></i>登入</a></li>
-            </ul>
             <ul class="top_nav">
+              <li>
+                  <a href="https://www.facebook.com/groups/696734843759803/" target="_blank">
+                      <img src="${portal/absolute_url}/resource/images/fb.png" style="vertical-align: middle">
+                  </a>
+              </li>
               <li><a href="http://www.ncue.edu.tw/">學校首頁</a></li>
               <li><a href="${portal/absolute_url}/6">下載資源</a></li>
             </ul>
