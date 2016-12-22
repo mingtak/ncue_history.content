@@ -13,8 +13,8 @@ portal = api.portal.get()
               <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-globe"></i>語言 <span class="caret"></span> </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">中文</a></li>
-                  <li><a href="#">English</a></li>
+                  <li><a href="/?set_language=zh-tw">中文</a></li>
+                  <li><a href="/intro?set_language=en">English</a></li>
                 </ul>
               </div>
             </div>
