@@ -24,20 +24,19 @@
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">plone.app.contenttypes.addLink</property>
+<!--  <property name="add_permission">plone.app.contenttypes.addLink</property> -->
+  <property name="add_permission">cmf.ManagePortal</property>
   <property name="klass">plone.app.contenttypes.content.Link</property>
   <property name="model_file">plone.app.contenttypes.schema:link.xml</property>
   <property name="model_source"></property>
   <property name="schema"></property>
 
   <!-- Enabled behaviors -->
-  <property name="behaviors" purge="false">
-    <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
+  <property name="behaviors" purge="true">
     <element value="plone.app.dexterity.behaviors.id.IShortName"/>
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
     <element value="ncue_history.content.behavior.behaviors.INamedFromTimeStamp" />
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
-    <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
   </property>
 
   <!-- View information -->

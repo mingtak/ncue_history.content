@@ -24,14 +24,15 @@
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">plone.app.contenttypes.addEvent</property>
+<!--  <property name="add_permission">plone.app.contenttypes.addEvent</property> -->
+  <property name="add_permission">cmf.ManagePortal</property>
   <property name="klass">plone.app.contenttypes.content.Event</property>
   <property name="model_file">plone.app.contenttypes.schema:event.xml</property>
   <property name="model_source"></property>
   <property name="schema"></property>
 
   <!-- Enabled behaviors -->
-  <property name="behaviors" purge="false">
+  <property name="behaviors" purge="true">
     <element value="plone.app.event.dx.behaviors.IEventBasic"/>
     <element value="plone.app.event.dx.behaviors.IEventRecurrence"/>
     <element value="plone.app.event.dx.behaviors.IEventLocation"/>
@@ -40,11 +41,9 @@
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
     <element value="ncue_history.content.behavior.behaviors.INamedFromTimeStamp" />
     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
-    <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
     <element value="plone.app.dexterity.behaviors.id.IShortName"/>
     <element value="plone.app.relationfield.behavior.IRelatedItems"/>
-    <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
     <element value="plone.app.lockingbehavior.behaviors.ILocking" />
   </property>
 

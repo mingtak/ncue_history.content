@@ -24,17 +24,17 @@
   <property name="global_allow">True</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">plone.app.contenttypes.addFolder</property>
+<!--  <property name="add_permission">plone.app.contenttypes.addFolder</property> -->
+  <property name="add_permission">cmf.ManagePortal</property>
   <property name="klass">plone.app.contenttypes.content.Folder</property>
   <property name="model_file">plone.app.contenttypes.schema:folder.xml</property>
   <property name="model_source"></property>
   <property name="schema"></property>
 
   <!-- Enabled behaviors -->
-  <property name="behaviors" purge="false">
+  <property name="behaviors" purge="true">
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
     <element value="ncue_history.content.behavior.behaviors.INamedFromTimeStamp" />
-    <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
     <element value="plone.app.dexterity.behaviors.id.IShortName"/>
     <element value="Products.CMFPlone.interfaces.constrains.ISelectableConstrainTypes"/>
@@ -48,12 +48,12 @@
   <property name="default_view_fallback">False</property>
   <property name="immediate_view">view</property>
   <property name="view_methods">
-    <element value="album_view"/>
+<!--    <element value="album_view"/>
     <element value="event_listing"/>
-    <element value="full_view"/>
+    <element value="full_view"/> -->
     <element value="listing_view"/>
-    <element value="summary_view"/>
-    <element value="tabular_view"/>
+<!--    <element value="summary_view"/>
+    <element value="tabular_view"/> -->
   </property>
 
   <!-- Method aliases -->
