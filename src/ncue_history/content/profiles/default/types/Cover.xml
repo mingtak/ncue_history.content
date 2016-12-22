@@ -34,7 +34,7 @@
 
   <!-- Enabled behaviors -->
   <property name="behaviors">
-    <element value="plone.app.content.interfaces.INameFromTitle" />
+    <element value="ncue_history.content.behavior.behaviors.INamedFromTimeStamp" />
   </property>
 
   <!-- View information -->

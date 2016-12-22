@@ -38,7 +38,7 @@
     <element value="plone.app.event.dx.behaviors.IEventAttendees"/>
     <element value="plone.app.event.dx.behaviors.IEventContact"/>
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
-    <element value="plone.app.content.interfaces.INameFromTitle"/>
+    <element value="ncue_history.content.behavior.behaviors.INamedFromTimeStamp" />
     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
     <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>

@@ -19,5 +19,12 @@
         factory=".behaviors.BxSlider"
         />
 
+    <plone:behavior
+        title="namedFromTimeStamp"
+        description="Named content id from time stamp"
+        provides=".behaviors.INamedFromTimeStamp"
+        factory=".behaviors.NamedFromTimeStamp"
+        />
+
 </configure>
 

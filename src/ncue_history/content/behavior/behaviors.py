@@ -10,10 +10,17 @@ from zope.interface import provider
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.app.vocabularies.catalog import CatalogSource
 from plone.dexterity.interfaces import IDexterityContent
+from plone.app.content.interfaces import INameFromTitle
+from DateTime import DateTime
+
+
+class INamedFromTimeStamp(INameFromTitle):
+    """ Marker/Form interface for namedFromTimeStamp
+    """
 
 
 class IFlicker(model.Schema):
-    """Add a field to fill Flicker embedded code
+    """ Add a field to fill Flicker embedded code
     """
 
     directives.fieldset(
@@ -58,6 +65,22 @@ def context_property(name):
     def deleter(self):
         delattr(self.context, name)
     return property(getter, setter, deleter)
+
+
+class NamedFromTimeStamp(object):
+    """ Adapter for NamedFromTimeStamp
+    """
+    implements(INamedFromTimeStamp)
+    adapts(IDexterityContent)
+
+    def __init__(self, context):
+        self.context = context
+
+    # -*- Your behavior property setters & getters here ... -*-
+    @property
+    def title(self):
+        timeString = DateTime().strftime("%Y%m%d%H%M")
+        return timeString
 
 
 class Flicker(object):
