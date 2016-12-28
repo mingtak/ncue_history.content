@@ -89,7 +89,9 @@ class ICover(Interface):
         required=False,
     )
 
-    hero_link = schema.Text(
-        title=_(u"Hero Link URL"),
+    hero_link = RelationList(
+        title=_(u"Hero Link to Folders"),
+        value_type=RelationChoice(title=_(u"Related"),
+                                  source=CatalogSource(portal_type=['Folder', 'Document']),),
         required=False,
     )
